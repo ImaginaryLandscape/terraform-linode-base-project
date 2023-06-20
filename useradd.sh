@@ -3,11 +3,12 @@
 create_user() {
   useradd -d /home/$user -s /bin/bash -G sudo,worker -s /bin/bash $user
   mkdir /home/$user /home/$user/.ssh/
-  echo $sshkey >> /home/$user/.ssh/authorized_keys
+  echo -e $sshkey >> /home/$user/.ssh/authorized_keys
   chown -R $user:$user /home/$user
   chmod 700 /home/$user/.ssh/
   chmod 600 /home/$user/.ssh/authorized_keys
   echo "${user}:${password}" | chpasswd
+  sudo chage -d 0 $user
 }
 
 

@@ -22,15 +22,12 @@ variable "AWS_SECRET_KEY" {}
 variable "AWS_REGION" {}
 
 
-# variable "authorized_keys" {
-#   default = ""
-#   type    = list(string)
-# }
+variable "authorized_keys" {
+  default = []
+  type    = list(string)
+}
 
-variable "authorized_keys" {}
-variable "root_password" {}
-variable "public_key_path" {}
-
+variable "admin_user" {}
 
 variable "ENV" {
   description = "Environment var."

@@ -56,8 +56,7 @@ terraform-linode-infra
     AWS_SECRET_KEY  = ""
     AWS_REGION      = ""
 
-    authorized_keys = ["~/.ssh/id_ed25519.pub"]
-    public_key_path = "~/.ssh/id_ed25519.pub"
+    authorized_keys = ["~/.ssh/id_iscape.pub"]
 
     linode_web_instance_type        = "g6-nanode-1"
     linode_web_instance_node_count  = 2

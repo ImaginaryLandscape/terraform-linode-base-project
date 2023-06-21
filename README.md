@@ -187,3 +187,13 @@ terraform-linode-infra
     SITE                            = "example"
     ID                              = "1"
     ```
+
+### User creation
+ - Create a file named user.txt
+ - Add user credentials as formatted below
+
+    ```
+    user1:password1:sshkey1
+    user2:password2:sshkey2
+    ...
+    ```

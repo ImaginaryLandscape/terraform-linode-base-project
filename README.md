@@ -189,8 +189,8 @@ terraform-linode-infra
     ```
 
 ### User creation
+ - Add the variable `create_users = true` to the `terraform.tfvars`
  - Create a file named user.txt
- - Add the following variable to the terraform.tfvars: create_users = true
  - Add user credentials as formatted below
 
     ```

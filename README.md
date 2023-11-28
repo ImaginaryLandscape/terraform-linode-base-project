@@ -27,7 +27,7 @@ terraform-linode-infra
     ├── terraform-plan-output/
     ├── terraform.tfvars
     ├── tf-envs/
-        ├── dev                         
+        ├── dev
             ├── backends.tfvars
             └── secrets.tfvars
         ├── prod
@@ -104,14 +104,14 @@ terraform-linode-infra
     │   └── terraform-linode-module-webserver -> ../terraform-linode-module-webserver
     ├── scripts
     └── tf-envs
-        ├── dev                         
+        ├── dev
         ├── prod
         ├── sandbox
         └── staging
     ```
 
     **NB:**
-    - The `modules` dir is only there to be the symlink target. It helps for the development part of those modules. 
+    - The `modules` dir is only there to be the symlink target. It helps for the development part of those modules.
     - Every changes made in the local `modules` folders would be taken into account when running `terraform commands`
     - Nothing is versioned from that `modules` folder from the point of view of the base project. However, they are versioned in their respective module `.git` repo.
 
@@ -122,22 +122,22 @@ terraform-linode-infra
         source = "../modules/terraform-linode-module-dbserver"
         ..
     }
-    
+
     module "webserver" {
         source = "../modules/terraform-linode-module-network"
         ..
     }
-    
+
     module "webserver" {
         source = "../modules/terraform-linode-module-nodebalancer"
         ..
     }
-    
+
     module "webserver" {
         source = "../modules/terraform-linode-module-webserver"
         ..
     }
-    
+
     ```
 
 - Initialize terraform dependencies
@@ -190,6 +190,7 @@ terraform-linode-infra
 
 ### User creation
  - Create a file named user.txt
+ - Add the following variable to the terraform.tfvars: create_users = true
  - Add user credentials as formatted below
 
     ```

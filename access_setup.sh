@@ -20,4 +20,3 @@ chown -R $user:$user /home/$user
 chmod 700 /home/$user/.ssh/
 chmod 600 /home/$user/.ssh/authorized_keys
 service sshd restart
-bash /tmp/useradd.sh

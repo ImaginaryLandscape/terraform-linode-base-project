@@ -14,7 +14,7 @@ variable "LN_REGION" {
   # default = "eu-west"        # 8 - eu-west
   # default = "ap-south"       # 9 - ap-south
   # default = "eu-central"     # 10 - eu-central
-  # default = "ap-northeast "  # 11 - ap-northeast 
+  # default = "ap-northeast "  # 11 - ap-northeast
 }
 
 variable "AWS_ACCESS_KEY" {}
@@ -28,6 +28,11 @@ variable "authorized_keys" {
 }
 
 variable "admin_user" {}
+
+variable "create_users" {
+  type    = bool
+  default = false
+}
 
 variable "ENV" {
   description = "Environment var."

@@ -39,3 +39,5 @@ terraform.rc
 # Ignore all output plans
 terraform-plan-output/
 .terraform-plan-output/
+
+user.txt
